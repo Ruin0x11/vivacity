@@ -1,0 +1,9 @@
+<h1>Weathers</h1>
+<%= form_tag(get_songs_path, method: 'get') do %>
+  <%= label_tag "songs" %>
+  <%= select_tag(
+    :chosen_weather,
+    options_from_collection_for_select(WeatherType.all, "id", "name")
+  ) %>
+  <%= submit_tag "Get songs" %>
+<% end -%>

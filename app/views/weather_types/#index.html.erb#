@@ -1,0 +1,4 @@
+<h1>Weathers</h1>
+<%= collection_select :song, :weather_type_id, WeatherType.all, :id, :name%>
+
+<% end %>
